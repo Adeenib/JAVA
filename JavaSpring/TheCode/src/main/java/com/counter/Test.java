@@ -8,31 +8,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class Test {
 	
-	
+	public  int counter=0;
 	
 
 	
 	
 	@RequestMapping("")
-	public String home(HttpSession session) {
-		if (session.getAttribute("count")==null) {
-			session.setAttribute("count", 1);}
-		else {addOne(session);}
+	public String home() {
+		this.counter++;
+		
        
 		return "home.jsp";
 	}
 	@RequestMapping("/counter")
 	public String counterBage(HttpSession session) {
 		
-		
+		session.setAttribute("count", counter);
 		return "counterbage.jsp";
-	}
-	public void addOne(HttpSession session) {
-		Integer c =(Integer)session.getAttribute("count");
-		c++;
-		session.setAttribute("count", c);
-		
-		
 	}
 
 }
