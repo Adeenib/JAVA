@@ -1,10 +1,10 @@
-package com.thecode;
+package com.dojosurvey;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TheCodeApplicationTests {
+class SurveyApplicationTests {
 
 	@Test
 	void contextLoads() {
