@@ -1,0 +1,12 @@
+@charset "ISO-8859-1";
+
+div{
+	
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 13rem;
+    width: 100%;
+	
+}

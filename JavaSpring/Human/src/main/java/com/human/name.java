@@ -13,8 +13,11 @@ public class name {
 		return "<h1>Hello human</h1> <p>welcome to spring boot</p>";
 	}
 	@RequestMapping("/")
-	 public String name1(@RequestParam(value="name", required=false) String name) {
-        return "<h1>Hello"+name+"</h1> <p>welcome to spring boot</p>";
+	 public String name1(@RequestParam(value="name", required=false) String name,@RequestParam(value="name1", required=false) String name1) {
+		if (name==null)
+			return "<h1>Hello human</h1> <p>welcome to spring boot</p>";
+		else
+			return "<h1>Hello "+name+"   "+name1+"</h1> <p>welcome to spring boot</p>";
 	}
 
 }
