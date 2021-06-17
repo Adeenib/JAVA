@@ -10,10 +10,10 @@
 <body>
 <h1>Submitted info</h1>
 <ul>
-<li>Name:<c:out value="${user.name}"/></li>
-<li>language:<c:out value="${user.language}"/></li>
-<li>location:<c:out value="${user.location}"/></li>
-<li>comment:<c:out value="${user.comment}"/></li>
+<li>Name:<c:out value="${name}"/></li>
+<li>language:<c:out value="${language}"/></li>
+<li>location:<c:out value="${location}"/></li>
+<li>comment:<c:out value="${comment}"/></li>
 
 
 </ul>
