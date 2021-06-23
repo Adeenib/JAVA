@@ -27,12 +27,7 @@ public class LangService {
 
 }
 	 public LangModels langInfo(long id) {
-		 Optional<LangModels> optionalLang=langrepository.findById(id);
-		  if(optionalLang.isPresent()) {
-		         return optionalLang.get();
-		     } else {
-		         return null;
-		     }
+		 return langrepository.findById(id).orElse(null);
 		
 		
 	}
@@ -40,14 +35,9 @@ public class LangService {
 		 
 		 langrepository.deleteById(id);
 	}
-	 public LangModels updateLang(LangModels langNew,Long id) {
-		 System.out.println("hay333");
-		 LangModels lang= langInfo(id);
-		 lang.setId(id);
-		 lang.setName(langNew.getName());
-		 lang.setCreator(langNew.getCreator());
-		 lang.setVersion(langNew.getVersion());
-		 langrepository.save(lang);
-		 return lang;
+	 public void updateLang(LangModels langNew) {
+		
+		 langrepository.save(langNew);
+		 
 	}
 }

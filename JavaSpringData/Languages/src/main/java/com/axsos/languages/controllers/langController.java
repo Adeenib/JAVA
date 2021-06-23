@@ -76,7 +76,7 @@ public class langController {
 			return "edit.jsp";
 
 		}else {
-		langservice.updateLang(lang,id);
+		langservice.updateLang(lang);
 		}
 		return "redirect:/languages/{id}?";
 	}
