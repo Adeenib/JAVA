@@ -2,6 +2,7 @@ package com.loginandregistration.controllers;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import javax.websocket.Session;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,7 +34,10 @@ public class UserController {
 	}
 
 	@RequestMapping("/login")
-	public String login() {
+	public String login(HttpSession session) {
+		if(session.getAttribute("userId")!=null)
+			return "redirect:/home";
+
 		return "loginPage.jsp";
 	}
 
